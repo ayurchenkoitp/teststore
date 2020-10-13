@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <mat-card class="card" *ngFor="let product of products;" routerLink = "/product/{{product.id}}">
+    <img mat-card-image src={{product.image}} alt="Image of Product">
+    <mat-card-content>
+      <p>
+        {{product.name}}
+      </p>
+      <p>
+        {{product.price | currency:'USD'}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

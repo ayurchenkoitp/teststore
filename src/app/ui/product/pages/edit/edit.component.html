@@ -1,0 +1,25 @@
+<div class="wrapper" *ngIf='isAutorized() && product!=null'>
+    <div class="productBox">
+        <img src={{product.image}} alt="Image of Product">
+        <div class="infoContainer">
+            <mat-form-field>
+                <mat-label>Product name:</mat-label>
+                <input matInput [(ngModel)]="product.name">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Product price:</mat-label>
+                <input matInput type="number" [(ngModel)]="product.price">
+                <span matPrefix>$&nbsp;</span>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Product category:</mat-label>
+                <input matInput [(ngModel)]="product.category">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Product description:</mat-label>
+                <textarea matInput [(ngModel)]="product.description"></textarea>
+            </mat-form-field>
+            <button mat-raised-button (click)="submitProductChanges()">Submit changes</button>
+        </div>  
+    </div>
+</div>

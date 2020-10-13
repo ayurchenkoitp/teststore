@@ -1,0 +1,38 @@
+<div>
+    <div class="userSelector" *ngIf="selectedUser!=null">
+        <mat-form-field>
+            <mat-label>Select an user</mat-label>
+            <mat-select [(ngModel)]="selectedUser">
+            <mat-option *ngFor="let user of users" [value]="user">{{user.email}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</div>
+<div class="wrapper" *ngIf="selectedUser!=null">
+    <div class="imageContainer">
+        <h2>{{selectedUser.firstName}} profile</h2>
+        <img class="profileImage" src="{{imageUrl}}" alt="avatar">
+    </div>
+    <div class="infoContainer">
+        <mat-form-field>
+            <mat-label>First Name:</mat-label>
+            <input matInput [(ngModel)]="selectedUser.firstName">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Last Name:</mat-label>
+            <input matInput [(ngModel)]="selectedUser.lastName">
+        </mat-form-field>
+        <!-- <mat-form-field>
+            <mat-label>Email:</mat-label>
+            <input matInput [(ngModel)]="selectedUser.email">
+        </mat-form-field> -->
+        <mat-form-field>
+            <mat-label>Role</mat-label>
+            <mat-select [(ngModel)]="selectedUser.role">
+              <mat-option value='user'>User</mat-option>
+              <mat-option value='admin'>Admin</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button class="btn" (click)='saveUserChanges()'>Save changes</button>
+    </div>
+</div>

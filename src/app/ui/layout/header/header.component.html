@@ -1,0 +1,31 @@
+<header *ngIf = "userRole != 'undefinedUser'">
+<!-- <header> -->
+    <div class="logo">
+        <img src="https://sun2-3.userapi.com/impg/c855120/v855120768/1a81c2/yStr2ExkiEo.jpg?size=50x0&quality=88&crop=68,0,411,411&sign=f9d4c054c58660e2c8c890b20607a0b3&ava=1" alt="logo">
+    </div>
+    <div class="middleButtons">
+        <a id="store-link" routerLink="home/store" role="button" aria-pressed="false">
+            Store
+        </a>
+        <a id="categories-link" routerLink="home/categories" role="button" aria-pressed="false">
+            Categories
+        </a>
+    </div>
+    <div class="profileButton">
+        <div *ngIf="currentUser != null">
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon" [matMenuTriggerFor]="menu">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item *ngIf="userRole==='admin'" routerLink="profile/admin">Admin Panel</button>
+                <!-- <button mat-menu-item routerLink="profile/admin">Admin Panel</button>   -->
+                <button mat-menu-item routerLink="profile">Profile</button>
+                <button mat-menu-item routerLink="auth/login" (click)="logout()">Logout</button>
+            </mat-menu>
+        </div>
+        <a class="logInButton" routerLink="/auth/login" *ngIf="currentUser == null">
+            Login
+        </a>
+    </div>
+</header>
+

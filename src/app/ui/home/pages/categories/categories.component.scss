@@ -1,0 +1,28 @@
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    margin: 50px;
+    max-width: 400px;
+    min-width: 200px;
+    padding: 50px;
+    border: black;
+    border: 50px;
+    width: 23%;
+}
+
+.mat-card-image{
+    max-height: 400px;
+}
+.mat-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //align-items: center;
+}
+.mat-card-content{
+    display: flex;
+    flex-direction: column;
+    justify-items: end;
+}

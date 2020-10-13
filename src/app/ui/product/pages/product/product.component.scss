@@ -1,0 +1,34 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: calc(100%-56px);
+    margin-top: 5%;
+}
+.productBox{
+    display: flex;
+    justify-content: space-around;
+}
+.price{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+img{
+    width:100%;
+    max-width:400px;
+    margin-right: 20px;
+    max-height: 400px;
+}   
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 390px;
+}
+button{
+    width: 20%;
+}

@@ -1,0 +1,40 @@
+.userSelector{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.wrapper{
+    display: flex;
+    //justify-content: space-around;
+    justify-content: center;
+    padding: 20px;
+}
+
+.imageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 22%;
+}
+.profileImage{
+    max-width: 200px;
+    max-height: 300px;
+    margin-bottom: 30px;
+}
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 18%;
+    margin-top: 60px;
+    margin-left: 10px;
+}
+.dialogButton{
+    width: 30px;
+}
+.mat-dialog-content{
+    display: flex;
+    flex-direction: column;
+}

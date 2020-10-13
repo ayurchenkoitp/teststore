@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Hi {{data.currentUser.firstName}},</h1>
+<div mat-dialog-content class="dialog">
+  <h2>Please add your changes:</h2>
+  <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input matInput [(ngModel)]="data.currentUser.firstName">
+  </mat-form-field>
+  <mat-form-field>
+      <mat-label>Last Name</mat-label>
+      <input matInput [(ngModel)]="data.currentUser.lastName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="data.currentUser.email">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <!-- <button mat-button (click)="onNoClick()">No Thanks</button> -->
+  <button mat-button [mat-dialog-close]="data.currentUser" cdkFocusInitial>Ok</button>
+</div>

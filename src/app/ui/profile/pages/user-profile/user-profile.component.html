@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <div class="imageContainer">
+        <h2>My profile</h2>
+        <img class="profileImage" src="{{imageUrl}}" alt="avatar">
+        <button (click)="chooseImage()">Upload picture</button>
+        <!-- <button (click)="openFile()" >Upload picture
+            <input type="file">
+        </button> -->
+    </div>
+    <div class="infoContainer" *ngIf='currentUser!=null'>
+        <p>
+            First Name: {{currentUser.firstName}}
+        </p>
+        <p>
+            Last Name: {{currentUser.lastName}}
+        </p>
+        <p>
+            Email: {{currentUser.email}}
+        </p>
+        <button class="dialogButton" mat-raised-button (click)="openDialog()">Edit</button><br>
+    </div>
+</div>

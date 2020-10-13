@@ -1,0 +1,21 @@
+<div class="wrapper" *ngIf = "product!=null">
+    <div class="productBox">
+        <img src={{product.image}} alt="Image of Product">
+        <div class="infoContainer">
+            <h2 class="name">
+                {{product.name}}
+            </h2>
+            <p class="price">
+                {{product.price | currency:'USD'}}
+            </p>
+            <p class="category">
+                Category: {{product.category}}
+            </p>
+            <p class="description">
+                Description: {{product.description}}
+            </p>
+            <button *ngIf='isAutorized()' mat-raised-button class="edit" routerLink="/product/{{id}}/edit">Edit</button>
+        </div>
+    </div>
+</div>
+
